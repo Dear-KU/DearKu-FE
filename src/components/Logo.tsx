@@ -16,9 +16,14 @@ export default function Logo({ size = 'md', showText = true }: LogoProps) {
   return (
     <div className="flex flex-col items-center">
       <div className={`relative ${sizes[size]} mb-2`}>
-        {/* 이미지는 public/assets 폴더에 추가될 예정입니다 */}
         <div className={`${sizes[size]} flex items-center justify-center bg-transparent`}>
-          <p className="text-gray-400 text-sm">로고 이미지</p>
+          <Image 
+            src="/assets/Logo.png" 
+            alt="DearKu Logo" 
+            width={size === 'lg' ? 144 : size === 'md' ? 112 : 64} 
+            height={size === 'lg' ? 144 : size === 'md' ? 112 : 64}
+            priority
+          />
         </div>
       </div>
       
