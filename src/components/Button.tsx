@@ -5,6 +5,8 @@ interface ButtonProps {
   onClick?: () => void;
   className?: string;
   type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary';
+  fullWidth?: boolean;
 }
 
 export default function Button({
@@ -12,12 +14,22 @@ export default function Button({
   onClick,
   className = '',
   type = 'button',
+  variant = 'primary',
+  fullWidth = false,
 }: ButtonProps) {
+  const baseStyles = 'py-4 rounded-md font-medium text-center';
+  const variantStyles = {
+    primary: 'bg-white text-black border border-gray-200',
+    secondary: 'bg-[#A98B73] text-white',
+  };
+  
+  const widthStyles = fullWidth ? 'w-full' : '';
+  
   return (
     <button
       type={type}
       onClick={onClick}
-      className={`px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 ${className}`}
+      className={`${baseStyles} ${variantStyles[variant]} ${widthStyles} ${className}`}
     >
       {children}
     </button>
