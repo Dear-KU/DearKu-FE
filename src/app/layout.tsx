@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'DearKu - 당신의 일기장',
-  description: '당신의 하루와 감정을 기록하는 공간',
+  title: 'DearKu - 건국대 소개팅',
+  description: '교내 1:1 매칭 서비스',
 };
 
 export default function RootLayout({
