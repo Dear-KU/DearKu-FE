@@ -9,4 +9,18 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  font-family: 'SUITE_Variable', sans-serif;
+}
+
+@font-face {
+  font-family: 'SUITE_Variable';
+  src: url('/fonts/SUITE-Variable.ttf') format('truetype');
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'SejongGeulggot';
+  src: url('/fonts/SejongGeulggot.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
 }

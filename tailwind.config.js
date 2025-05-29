@@ -6,7 +6,15 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        suite: ["'SUITE_Variable'", "sans-serif"],
+        sejong: ["'SejongGeulggot'", "sans-serif"],
+      },
+      colors: {
+        Main1: '#A6896F', // Figma에서 추출한 갈색
+      }
+    }
   },
   plugins: [],
 }
